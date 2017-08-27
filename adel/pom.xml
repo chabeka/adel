@@ -14,13 +14,31 @@
   	<version>1.4.0.RELEASE</version>
   </parent>
   <dependencies>
+  	<!-- Starter for building web, REST applications. It uses tomcat server as default embedded server -->
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-web</artifactId>
   	</dependency>
+  	<!-- It provides developer tools. These tools are helpful in application development mode. One of the 
+  		 features of developer tool is automatic restart of the server for any change in code -->
+    <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-devtools</artifactId>
+         <optional>true</optional>
+     </dependency> 
+     <!-- for data persistance --> 
+     <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+	 </dependency>
+ 	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+    </dependency>	
   </dependencies>
   <build>
   	<plugins>
+  	<!--  It is used to create executable JAR of the application -->
   	<plugin>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-maven-plugin</artifactId>  	
